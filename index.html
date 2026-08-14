@@ -2,586 +2,152 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIThinkar — Think Smart. Build Fast.</title>
-<meta name="description" content="AIThinkar builds fast, modern websites and AI & WhatsApp automation for growing businesses.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AIThinkar — Digital Solutions for Modern Business</title>
+<meta name="description" content="AIThinkar builds websites, brands, AI automation and WhatsApp solutions for modern businesses.">
 <style>
-  :root{
-    --bg: #0A0E1A;
-    --bg-raised: #10152A;
-    --violet: #7C5CFF;
-    --cyan: #4CD9E8;
-    --text: #EDEBF5;
-    --text-dim: #8A8FA8;
-    --line: rgba(237,235,245,0.10);
-    --radius: 14px;
-  }
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f7f8fc;--panel:#ffffff;--panel2:#f1f3f8;--text:#10121a;--muted:#687080;--line:rgba(16,18,26,.10);--purple:#7c3aed;--blue:#4f46e5;--cyan:#0891b2;--green:#059669}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{text-decoration:none;color:inherit}.container{width:min(1180px,calc(100% - 40px));margin:auto}
+nav{position:fixed;z-index:100;top:16px;left:50%;transform:translateX(-50%);width:min(1140px,calc(100% - 28px));height:68px;border:1px solid var(--line);background:rgba(255,255,255,.82);backdrop-filter:blur(22px);border-radius:18px;padding:0 9px 0 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:700 21px "Space Grotesk";letter-spacing:-1px}.logo span{background:linear-gradient(90deg,#a78bfa,#67e8f9);-webkit-background-clip:text;color:transparent}
+.navlinks{display:flex;gap:27px;font-size:13px;color:#626a79}.navlinks a:hover{color:#111}.nav-btn{padding:11px 16px;border-radius:11px;background:#111827;color:#fff;font-weight:700;font-size:13px}
+.hero{min-height:900px;padding:190px 0 100px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 18%,rgba(124,58,237,.14),transparent 38%),radial-gradient(circle at 85% 50%,rgba(8,145,178,.10),transparent 25%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(17,24,39,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(17,24,39,.055) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,#000,transparent 75%)}
+.hero-orb{position:absolute;width:500px;height:500px;border-radius:50%;right:-170px;top:160px;border:1px solid rgba(167,139,250,.12);box-shadow:0 0 150px rgba(139,92,246,.12)}
+.hero-content{position:relative;max-width:850px}.badge{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border-radius:50px;background:#ffffff;border:1px solid var(--line);color:#596274;font-size:12px;margin-bottom:27px}.live{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 14px #4ade80}
+h1{font:700 clamp(58px,8vw,105px)/.92 "Space Grotesk";letter-spacing:-6px}.gradient{background:linear-gradient(100deg,#fff 18%,#a78bfa 52%,#67e8f9);-webkit-background-clip:text;color:transparent}
+.hero p{max-width:610px;color:var(--muted);font-size:17px;margin:28px 0 32px}.actions{display:flex;gap:11px}.btn{padding:14px 19px;border-radius:12px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:8px}.primary{background:#fff;color:#07080c}.secondary{border:1px solid var(--line);background:#ffffff}
+.hero-stats{display:flex;gap:45px;margin-top:65px}.hero-stat strong{font:600 25px "Space Grotesk";display:block}.hero-stat span{font-size:11px;color:#697384}
+.trust{border-block:1px solid var(--line);background:#f0f2f7;padding:20px 0}.trust-row{display:flex;justify-content:space-between;align-items:center;gap:20px;color:#697384;font:600 12px "Space Grotesk";letter-spacing:1px}.trust-row b{color:#868e9c}
+section{padding:110px 0}.section-top{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:48px}.eyebrow{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#6d3bd1;font-weight:700;margin-bottom:11px}.title{font:600 clamp(38px,5vw,62px)/1 "Space Grotesk";letter-spacing:-3px}.desc{max-width:420px;color:var(--muted);font-size:14px;line-height:1.75}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.service{position:relative;min-height:285px;border:1px solid var(--line);border-radius:24px;padding:28px;background:linear-gradient(145deg,#ffffff,#f4f6fb);overflow:hidden;transition:.35s}.service:hover{transform:translateY(-7px);border-color:#8b5cf644;box-shadow:0 25px 70px #0008}.service:after{content:"";position:absolute;width:240px;height:240px;right:-110px;bottom:-130px;border-radius:50%;background:radial-gradient(circle,#8b5cf625,transparent 65%)}.service-top{display:flex;justify-content:space-between;align-items:start}.service-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#8b5cf622,#22d3ee12);border:1px solid #ffffff10;color:#c5b5ff;font-size:21px}.service-num{color:#555e6d;font:12px "Space Grotesk"}.service h3{font:600 25px "Space Grotesk";margin-top:55px}.service p{color:#7d8592;font-size:13px;max-width:430px;margin-top:8px}.service-link{display:inline-block;margin-top:22px;font-size:12px;color:#a99af0}
+.benefits{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.benefit-copy .title{max-width:520px}.benefit-copy>p{color:var(--muted);max-width:480px;margin:22px 0 27px;font-size:14px}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:10px}.check{padding:14px 15px;border:1px solid var(--line);background:#ffffff;border-radius:13px;color:#aeb5c1;font-size:12px}.check b{color:#8b5cf6;margin-right:8px}.benefit-cards{display:grid;grid-template-columns:1fr 1fr;gap:13px}.benefit{padding:25px;border:1px solid var(--line);border-radius:20px;background:#ffffff;min-height:190px}.benefit:nth-child(2){transform:translateY(30px)}.benefit:nth-child(3){transform:translateY(-10px)}.benefit-icon{font-size:22px;margin-bottom:32px}.benefit h3{font:600 17px "Space Grotesk";margin-bottom:6px}.benefit p{color:#6f7888;font-size:12px;line-height:1.65}
+.about{background:linear-gradient(180deg,#ffffff,#f5f6fa)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.about-text .big{font:500 clamp(30px,4vw,48px)/1.1 "Space Grotesk";letter-spacing:-2px}.about-text .big span{color:#697180}.about-text>p{color:var(--muted);font-size:14px;line-height:1.8;margin:23px 0}.numbers{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden}.number{background:#ffffff;padding:30px}.number strong{font:600 43px "Space Grotesk"}.number span{display:block;color:#697384;font-size:11px;margin-top:3px}
+.portfolio{display:grid;grid-template-columns:1.3fr .7fr;gap:14px}.project{position:relative;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#ffffff;min-height:440px;padding:28px}.project.main{background:linear-gradient(135deg,#f0eaff,#e8faff)}.project.small{min-height:213px}.project.small+.project.small{margin-top:14px;background:linear-gradient(135deg,#f4f7ff,#f2ecff)}.project-label{color:#9098a7;font-size:10px;letter-spacing:1.8px}.project h3{font:600 28px/1.08 "Space Grotesk";margin-top:13px}.small h3{font-size:22px}.mock{position:absolute;left:28px;right:28px;bottom:-95px;height:260px;border:1px solid #ffffff15;border-radius:17px;background:#f5f7fb;box-shadow:0 25px 70px rgba(38,42,58,.16);transform:perspective(900px) rotateX(8deg);padding:14px}.mock-top{display:flex;gap:4px}.mock-top i{width:6px;height:6px;border-radius:50%;background:#4b515c}.mock-body{margin-top:14px;height:205px;border-radius:9px;background:linear-gradient(135deg,#ffffff,#eef9ff);padding:25px}.mock-logo{width:55px;height:7px;border-radius:8px;background:#ffffff40}.mock-title{width:60%;height:24px;border-radius:5px;margin-top:30px;background:linear-gradient(90deg,#8b5cf6,#22d3ee)}.mock-lines{width:72%;height:50px;margin-top:12px;background:repeating-linear-gradient(#ffffff12 0 5px,transparent 5px 13px)}.small .mock{bottom:-95px;height:170px}.small .mock-body{height:115px;padding:15px}.small .mock-title{height:15px;margin-top:18px}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}.step{padding:24px 24px 0 0;min-height:235px;border-right:1px solid var(--line)}.step:not(:first-child){padding-left:24px}.step:last-child{border-right:0}.step-no{color:#6d3bd1;font:12px "Space Grotesk"}.step h3{font:600 21px "Space Grotesk";margin:55px 0 8px}.step p{font-size:12px;color:#697384;max-width:200px}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.testimonial{padding:25px;border:1px solid var(--line);border-radius:20px;background:#ffffff}.stars{color:#a78bfa;letter-spacing:2px;font-size:11px}.testimonial blockquote{font:500 17px/1.55 "Space Grotesk";margin:28px 0;color:#252936}.client{font-size:11px;color:#727a87}.client strong{display:block;color:#111827;font-size:12px}
+.faq{display:grid;grid-template-columns:.7fr 1.3fr;gap:80px}.faq-list{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:21px 0}summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;font:600 15px "Space Grotesk"}summary:after{content:"+";color:#8b5cf6}details[open] summary:after{content:"−"}details p{color:#697384;font-size:13px;line-height:1.7;margin-top:14px;max-width:650px}
+.cta{padding:100px 30px;text-align:center;border:1px solid var(--line);border-radius:30px;background:radial-gradient(circle at 50% 0,rgba(139,92,246,.22),transparent 55%),#0d1017;position:relative;overflow:hidden}.cta .title{font-size:clamp(45px,7vw,80px)}.cta p{max-width:500px;margin:20px auto 30px;color:#6f7888;font-size:14px}.contact-info{display:flex;justify-content:center;gap:28px;margin-top:35px;color:#697384;font-size:12px}.contact-info span{padding-left:15px;border-left:1px solid var(--line)}
+footer{margin-top:30px;padding:42px 0 55px;display:flex;justify-content:space-between;color:#697384;font-size:11px}
+.reveal{opacity:0;transform:translateY(25px);transition:.75s}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.hero-content>div[style]{display:none}.navlinks{display:none}.container{width:calc(100% - 28px)}.hero{min-height:800px;padding-top:150px}h1{letter-spacing:-4px}.hero-stats{gap:22px}.section-top{display:block}.desc{margin-top:17px}.services,.benefits,.about-grid,.portfolio,.faq{grid-template-columns:1fr}.benefit-cards{margin-top:10px}.benefit:nth-child(2),.benefit:nth-child(3){transform:none}.project{min-height:370px}.project.small{min-height:220px}.process{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step:nth-child(n+3){border-top:1px solid var(--line);padding-top:24px}.testimonials{grid-template-columns:1fr}.faq{gap:40px}}
+@media(max-width:520px){section{padding:85px 0}.hero p{font-size:14px}.hero-stats{flex-wrap:wrap}.hero-stat{min-width:80px}.actions{flex-direction:column}.btn{justify-content:center}.services,.benefit-cards,.checklist,.process{grid-template-columns:1fr}.service{min-height:250px}.process .step{border-right:0!important;border-bottom:1px solid var(--line);min-height:170px;padding:20px 0!important}.numbers{grid-template-columns:1fr}.number{border-bottom:1px solid var(--line)}.contact-info{flex-direction:column;gap:10px}.contact-info span{border:0}.project{min-height:330px}}
 
-  *{ margin:0; padding:0; box-sizing:border-box; }
-
-  html{ scroll-behavior:smooth; }
-
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Inter', sans-serif;
-    line-height:1.6;
-    overflow-x:hidden;
-  }
-
-  h1,h2,h3{
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:600;
-    letter-spacing:-0.02em;
-  }
-
-  .mono{
-    font-family:'JetBrains Mono', monospace;
-  }
-
-  a{ color:inherit; text-decoration:none; }
-
-  ::selection{ background:var(--violet); color:#fff; }
-
-  :focus-visible{
-    outline:2px solid var(--cyan);
-    outline-offset:3px;
-    border-radius:4px;
-  }
-
-  /* ---------- background synapse field ---------- */
-  .field{
-    position:fixed;
-    inset:0;
-    z-index:0;
-    pointer-events:none;
-    opacity:0.5;
-  }
-  .field svg{ width:100%; height:100%; }
-  .node{ fill:var(--violet); opacity:0; animation:pulse 4s ease-in-out infinite; }
-  .node.cyan{ fill:var(--cyan); }
-  .link{
-    stroke:var(--violet);
-    stroke-width:1;
-    opacity:0;
-    stroke-dasharray:4 4;
-    animation:fadein 2.5s ease forwards, dash 20s linear infinite;
-  }
-  @keyframes pulse{
-    0%,100%{ opacity:0.15; }
-    50%{ opacity:0.6; }
-  }
-  @keyframes fadein{ to{ opacity:0.25; } }
-  @keyframes dash{ to{ stroke-dashoffset:-200; } }
-
-  /* ---------- layout shell ---------- */
-  .wrap{
-    position:relative;
-    z-index:1;
-    max-width:1180px;
-    margin:0 auto;
-    padding:0 32px;
-  }
-
-  header.nav{
-    position:sticky; top:0; z-index:10;
-    backdrop-filter: blur(10px);
-    background:rgba(10,14,26,0.75);
-    border-bottom:1px solid var(--line);
-  }
-  .nav-inner{
-    max-width:1180px; margin:0 auto; padding:18px 32px;
-    display:flex; align-items:center; justify-content:space-between;
-  }
-  .logo{
-    display:flex; align-items:center; gap:10px;
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:700; font-size:1.05rem; letter-spacing:-0.01em;
-  }
-  .logo-mark{
-    width:28px; height:28px; border-radius:8px;
-    background:linear-gradient(135deg, var(--violet), var(--cyan));
-    display:flex; align-items:center; justify-content:center;
-    font-size:0.8rem; font-weight:700; color:#0A0E1A;
-  }
-  .nav-links{ display:flex; gap:32px; font-size:0.9rem; color:var(--text-dim); }
-  .nav-links a:hover{ color:var(--text); }
-  .nav-cta{
-    padding:9px 18px; border-radius:999px;
-    background:var(--text); color:var(--bg);
-    font-size:0.85rem; font-weight:600;
-  }
-  .nav-cta:hover{ opacity:0.88; }
-
-  @media (max-width:760px){ .nav-links{ display:none; } }
-
-  /* ---------- hero ---------- */
-  .hero{
-    padding:110px 0 90px;
-    display:grid;
-    grid-template-columns:1.05fr 0.95fr;
-    gap:60px;
-    align-items:center;
-  }
-  @media (max-width:900px){ .hero{ grid-template-columns:1fr; padding:70px 0 60px; } }
-
-  .eyebrow{
-    display:inline-flex; align-items:center; gap:8px;
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase;
-    color:var(--cyan);
-    border:1px solid rgba(76,217,232,0.3);
-    background:rgba(76,217,232,0.06);
-    padding:6px 12px; border-radius:999px;
-    margin-bottom:22px;
-  }
-  .eyebrow::before{
-    content:''; width:6px; height:6px; border-radius:50%;
-    background:var(--cyan);
-    box-shadow:0 0 8px var(--cyan);
-  }
-
-  .hero h1{
-    font-size:clamp(2.4rem, 5vw, 3.6rem);
-    line-height:1.05;
-    margin-bottom:22px;
-  }
-  .hero h1 .accent{
-    background:linear-gradient(100deg, var(--violet), var(--cyan));
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-  }
-  .hero p.lead{
-    color:var(--text-dim);
-    font-size:1.05rem;
-    max-width:480px;
-    margin-bottom:34px;
-  }
-  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
-
-  .btn{
-    display:inline-flex; align-items:center; gap:8px;
-    padding:13px 24px; border-radius:10px;
-    font-weight:600; font-size:0.92rem;
-    transition:transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .btn-primary{
-    background:linear-gradient(100deg, var(--violet), #9B7CFF);
-    color:#fff;
-    box-shadow:0 8px 30px -8px rgba(124,92,255,0.6);
-  }
-  .btn-primary:hover{ transform:translateY(-2px); }
-  .btn-ghost{
-    border:1px solid var(--line);
-    color:var(--text);
-  }
-  .btn-ghost:hover{ border-color:rgba(237,235,245,0.3); }
-
-  /* ---------- terminal signature ---------- */
-  .terminal{
-    background:var(--bg-raised);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    overflow:hidden;
-    box-shadow:0 30px 80px -30px rgba(0,0,0,0.6);
-  }
-  .terminal-bar{
-    display:flex; align-items:center; gap:8px;
-    padding:12px 16px;
-    border-bottom:1px solid var(--line);
-  }
-  .terminal-bar span{
-    width:10px; height:10px; border-radius:50%;
-    background:rgba(237,235,245,0.15);
-  }
-  .terminal-bar .label{
-    margin-left:8px;
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.72rem;
-    color:var(--text-dim);
-  }
-  .terminal-body{
-    padding:22px 20px 26px;
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.84rem;
-    min-height:260px;
-  }
-  .terminal-body .line{
-    display:flex; gap:10px;
-    margin-bottom:11px;
-    opacity:0;
-    animation:reveal 0.4s ease forwards;
-  }
-  .terminal-body .line .tag{ color:var(--cyan); flex-shrink:0; }
-  .terminal-body .line .txt{ color:var(--text-dim); }
-  .terminal-body .line.ok .txt{ color:var(--text); }
-  .terminal-body .line.ok .tag{ color:#5CFFB0; }
-  @keyframes reveal{ to{ opacity:1; } }
-
-  .terminal-body .caret{
-    display:inline-block; width:7px; height:15px;
-    background:var(--violet);
-    animation:blink 1s steps(1) infinite;
-    vertical-align:middle;
-  }
-  @keyframes blink{ 50%{ opacity:0; } }
-
-  /* ---------- section shell ---------- */
-  section{ padding:100px 0; position:relative; }
-  .section-head{ margin-bottom:52px; max-width:600px; }
-  .section-head .eyebrow{ margin-bottom:16px; }
-  .section-head h2{ font-size:clamp(1.8rem, 3.4vw, 2.4rem); margin-bottom:14px; }
-  .section-head p{ color:var(--text-dim); font-size:1rem; }
-
-  /* ---------- services ---------- */
-  .services{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-  @media (max-width:760px){ .services{ grid-template-columns:1fr; } }
-  .service-card{
-    background:var(--bg-raised);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:34px;
-    transition:border-color 0.2s ease, transform 0.2s ease;
-  }
-  .service-card:hover{ border-color:rgba(124,92,255,0.4); transform:translateY(-3px); }
-  .service-icon{
-    width:44px; height:44px; border-radius:10px;
-    background:rgba(124,92,255,0.12);
-    display:flex; align-items:center; justify-content:center;
-    margin-bottom:20px;
-    font-size:1.2rem;
-  }
-  .service-card h3{ font-size:1.2rem; margin-bottom:10px; }
-  .service-card p{ color:var(--text-dim); font-size:0.94rem; margin-bottom:18px; }
-  .service-card ul{ list-style:none; }
-  .service-card li{
-    font-size:0.86rem; color:var(--text-dim);
-    padding-left:18px; position:relative; margin-bottom:8px;
-  }
-  .service-card li::before{
-    content:'—'; position:absolute; left:0; color:var(--cyan);
-  }
-
-  /* ---------- process ---------- */
-  .process{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:0;
-    border-top:1px solid var(--line);
-    border-left:1px solid var(--line);
-  }
-  @media (max-width:820px){ .process{ grid-template-columns:1fr 1fr; } }
-  .process-step{
-    padding:28px 24px;
-    border-right:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-  }
-  .process-step .num{
-    font-family:'JetBrains Mono', monospace;
-    color:var(--violet);
-    font-size:0.8rem;
-    margin-bottom:14px;
-    display:block;
-  }
-  .process-step h3{ font-size:1.05rem; margin-bottom:8px; }
-  .process-step p{ color:var(--text-dim); font-size:0.86rem; }
-
-  /* ---------- work ---------- */
-  .work-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-  @media (max-width:900px){ .work-grid{ grid-template-columns:1fr; } }
-  .work-card{
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    overflow:hidden;
-    background:var(--bg-raised);
-  }
-  .work-preview{
-    aspect-ratio:4/3;
-    position:relative;
-    padding:16px;
-    display:flex; flex-direction:column; gap:8px;
-  }
-  .work-preview .browser-dot{
-    display:flex; gap:5px; margin-bottom:6px;
-  }
-  .work-preview .browser-dot span{
-    width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,0.2);
-  }
-  .work-preview .mock-block{
-    border-radius:6px;
-    background:rgba(255,255,255,0.06);
-  }
-  .work-info{ padding:18px 20px 22px; border-top:1px solid var(--line); }
-  .work-info .tag{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.7rem; color:var(--cyan); text-transform:uppercase; letter-spacing:0.05em;
-  }
-  .work-info h3{ font-size:1.02rem; margin:8px 0 6px; }
-  .work-info p{ color:var(--text-dim); font-size:0.84rem; }
-
-  /* work mock variations */
-  .wp1{ background:linear-gradient(160deg, #1a1030, #0A0E1A); }
-  .wp1 .mock-block:nth-child(2){ height:34%; background:linear-gradient(100deg, rgba(124,92,255,0.35), rgba(76,217,232,0.15)); }
-  .wp1 .mock-block:nth-child(3){ height:10%; width:40%; }
-  .wp1 .mock-block:nth-child(4){ height:42%; }
-
-  .wp2{ background:linear-gradient(160deg, #0d2430, #0A0E1A); }
-  .wp2 .mock-block:nth-child(2){ height:16%; width:60%; }
-  .wp2 .mock-block:nth-child(3){ height:16%; width:30%; }
-  .wp2 .mock-block:nth-child(4){ flex:1; background:linear-gradient(100deg, rgba(76,217,232,0.3), rgba(124,92,255,0.15)); }
-
-  .wp3{ background:linear-gradient(160deg, #241030, #0A0E1A); }
-  .wp3 .mock-block:nth-child(2){ height:60%; background:linear-gradient(160deg, rgba(124,92,255,0.3), rgba(76,217,232,0.2)); }
-  .wp3 .mock-block:nth-child(3){ height:14%; width:70%; }
-
-  /* ---------- contact ---------- */
-  .contact-box{
-    border:1px solid var(--line);
-    border-radius:20px;
-    background:linear-gradient(140deg, var(--bg-raised), rgba(124,92,255,0.06));
-    padding:60px;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
-  }
-  @media (max-width:640px){ .contact-box{ padding:40px 24px; } }
-  .contact-box h2{ font-size:clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom:16px; }
-  .contact-box p{ color:var(--text-dim); max-width:440px; margin:0 auto 32px; }
-  .contact-ctas{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
-
-  footer{
-    border-top:1px solid var(--line);
-    padding:36px 0;
-  }
-  .footer-inner{
-    display:flex; justify-content:space-between; align-items:center;
-    flex-wrap:wrap; gap:16px;
-    font-size:0.82rem; color:var(--text-dim);
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; }
-  }
-
-  .reveal{
-    opacity:0; transform:translateY(16px);
-    transition:opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.in{ opacity:1; transform:translateY(0); }
+/* LIGHT PREMIUM GRAPHICS */
+.hero:after{content:"";position:absolute;right:8%;top:170px;width:390px;height:390px;border-radius:50%;background:conic-gradient(from 120deg,rgba(124,58,237,.28),rgba(34,211,238,.18),rgba(255,255,255,0),rgba(124,58,237,.28));filter:blur(2px);opacity:.8;z-index:0}
+.hero-content{z-index:2}
+.hero-orb{border-color:rgba(124,58,237,.15);box-shadow:0 0 100px rgba(124,58,237,.12)}
+.hero-orb:before,.hero-orb:after{content:"";position:absolute;border:1px solid rgba(124,58,237,.13);border-radius:50%;inset:55px}
+.hero-orb:after{inset:110px;border-color:rgba(8,145,178,.15)}
+.service,.benefit,.testimonial,.project,.numbers{box-shadow:0 14px 45px rgba(31,41,55,.055)}
+.service:hover{box-shadow:0 25px 70px rgba(79,70,229,.12)}
+.service-icon{background:linear-gradient(135deg,#f0eaff,#e7faff);color:#6738d1;box-shadow:0 8px 25px rgba(124,58,237,.10)}
+.benefit-icon{color:#6d3bd1}
+.trust{background:#fff}
+.project:before{content:"";position:absolute;right:-70px;top:-70px;width:180px;height:180px;border-radius:50%;background:linear-gradient(135deg,#8b5cf633,#22d3ee20);filter:blur(1px)}
+.cta{background:radial-gradient(circle at 50% 0,rgba(124,58,237,.13),transparent 55%),linear-gradient(135deg,#ffffff,#f4f1ff)}
+.cta:before{content:"";position:absolute;width:340px;height:340px;left:-120px;bottom:-170px;border-radius:50%;background:#67e8f922;filter:blur(10px)}
+.number strong{background:linear-gradient(90deg,#6d3bd1,#0891b2);-webkit-background-clip:text;color:transparent}
+.section-top .desc,.about-text>p{color:#687080}
+.mock{background:#fff;border-color:rgba(16,18,26,.10)}
+.mock-body{box-shadow:inset 0 0 0 1px rgba(16,18,26,.06)}
+.process{border-color:rgba(16,18,26,.10)}
+.step{border-color:rgba(16,18,26,.10)}
+details{border-color:rgba(16,18,26,.10)}
 </style>
 </head>
 <body>
+<nav>
+<a class="logo" href="#">AI<span>Thinkar</span></a>
+<div class="navlinks"><a href="#services">Services</a><a href="#benefits">Benefits</a><a href="#work">Work</a><a href="#process">Process</a><a href="#faq">FAQ</a></div>
+<a class="nav-btn" href="#contact">Let's talk ↗</a>
+</nav>
 
-<div class="field" aria-hidden="true">
-  <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-    <line class="link" x1="120" y1="140" x2="340" y2="260" style="animation-delay:0s"/>
-    <line class="link" x1="340" y1="260" x2="600" y2="120" style="animation-delay:0.3s"/>
-    <line class="link" x1="600" y1="120" x2="860" y2="240" style="animation-delay:0.6s"/>
-    <line class="link" x1="860" y1="240" x2="1080" y2="150" style="animation-delay:0.9s"/>
-    <line class="link" x1="200" y1="500" x2="440" y2="440" style="animation-delay:0.2s"/>
-    <line class="link" x1="440" y1="440" x2="700" y2="560" style="animation-delay:0.5s"/>
-    <line class="link" x1="700" y1="560" x2="960" y2="480" style="animation-delay:0.8s"/>
-    <line class="link" x1="340" y1="260" x2="440" y2="440" style="animation-delay:1.1s"/>
-    <line class="link" x1="600" y1="120" x2="700" y2="560" style="animation-delay:1.4s"/>
-    <circle class="node" cx="120" cy="140" r="3" style="animation-delay:0.2s"/>
-    <circle class="node cyan" cx="340" cy="260" r="4" style="animation-delay:0.6s"/>
-    <circle class="node" cx="600" cy="120" r="3" style="animation-delay:1s"/>
-    <circle class="node cyan" cx="860" cy="240" r="3" style="animation-delay:1.4s"/>
-    <circle class="node" cx="1080" cy="150" r="3" style="animation-delay:1.8s"/>
-    <circle class="node" cx="200" cy="500" r="3" style="animation-delay:0.4s"/>
-    <circle class="node cyan" cx="440" cy="440" r="4" style="animation-delay:0.8s"/>
-    <circle class="node" cx="700" cy="560" r="3" style="animation-delay:1.2s"/>
-    <circle class="node" cx="960" cy="480" r="3" style="animation-delay:1.6s"/>
-  </svg>
-</div>
-
-<header class="nav">
-  <div class="nav-inner">
-    <div class="logo">
-      <img src="./aithinkar.png" style="width:70px;">
-      AIThinkar
-    </div>
-    <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="nav-cta" href="#contact">Start a project</a>
-  </div>
+<header class="hero">
+<div class="hero-grid"></div><div class="hero-orb"></div>
+<div class="container"><div class="hero-content reveal">
+<div style="position:absolute;right:0;top:120px;width:190px;padding:13px 15px;border:1px solid rgba(16,18,26,.09);background:#ffffffcc;backdrop-filter:blur(15px);border-radius:15px;box-shadow:0 18px 45px rgba(31,41,55,.08);font-size:11px;color:#687080">✦ <b style="color:#111827">SMART DIGITAL</b><br><span style="padding-left:18px">Websites · AI · Automation</span></div>
+<div class="badge"><span class="live"></span> Digital solutions for modern businesses</div>
+<h1>Build a brand<br>people <span class="gradient">remember.</span></h1>
+<p>We design websites, digital experiences and intelligent automations that help businesses look better, work smarter and grow faster.</p>
+<div class="actions"><a class="btn primary" href="#work">Explore our work ↗</a><a class="btn secondary" href="#contact">Start a project</a></div>
+<div class="hero-stats"><div class="hero-stat"><strong>50+</strong><span>Projects delivered</span></div><div class="hero-stat"><strong>4+</strong><span>Years experience</span></div><div class="hero-stat"><strong>100%</strong><span>Responsive</span></div><div class="hero-stat"><strong>24/7</strong><span>Digital presence</span></div></div>
+</div></div>
 </header>
 
-<main class="wrap">
+<div class="trust"><div class="container trust-row"><span>BUILT FOR <b>STARTUPS</b></span><span><b>LOCAL BUSINESS</b></span><span><b>RESTAURANTS</b></span><span><b>EDUCATION</b></span><span><b>PROFESSIONAL SERVICES</b></span></div></div>
 
-  <section class="hero">
-    <div>
-      <span class="eyebrow">AIThinkar · Digital Solutions</span>
-      <h1>Think smart.<br><span class="accent">Build fast.</span></h1>
-      <p class="lead">We design websites and automate the busywork behind them — so growing businesses launch sooner, respond faster, and spend less time on the parts that shouldn't need a human.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="#contact">Start a project →</a>
-        <a class="btn btn-ghost" href="#work">See sample work</a>
-      </div>
-    </div>
+<section id="services"><div class="container">
+<div class="section-top reveal"><div><div class="eyebrow">01 — Services</div><h2 class="title">Everything you need<br>to grow online.</h2></div><p class="desc">From your first website to automated customer journeys, we bring design, technology and strategy together.</p></div>
+<div class="services">
+<div class="service reveal"><div class="service-top"><div class="service-icon">⌁</div><span class="service-num">01</span></div><h3>Website Development</h3><p>Modern, fast and responsive websites designed around your business and customers.</p><a class="service-link" href="#contact">Build your website →</a></div>
+<div class="service reveal"><div class="service-top"><div class="service-icon">✦</div><span class="service-num">02</span></div><h3>AI Automation</h3><p>Automate repetitive work and create intelligent workflows that save time every day.</p><a class="service-link" href="#contact">Automate your business →</a></div>
+<div class="service reveal"><div class="service-top"><div class="service-icon">◌</div><span class="service-num">03</span></div><h3>WhatsApp Automation</h3><p>Connect, notify and communicate with customers using powerful WhatsApp workflows.</p><a class="service-link" href="#contact">Start automation →</a></div>
+<div class="service reveal"><div class="service-top"><div class="service-icon">◇</div><span class="service-num">04</span></div><h3>Branding & SEO</h3><p>Create a memorable identity and improve your visibility across search and digital channels.</p><a class="service-link" href="#contact">Grow your presence →</a></div>
+</div>
+</div></section>
 
-    <div class="terminal" role="img" aria-label="Simulated build log showing a website being planned, designed, built, and launched">
-      <div class="terminal-bar">
-        <span></span><span></span><span></span>
-        <span class="label">aithinkar — build.log</span>
-      </div>
-      <div class="terminal-body" id="termBody">
-        <div class="line" style="animation-delay:0.2s"><span class="tag">&gt;</span><span class="txt">reading business goals...</span></div>
-        <div class="line" style="animation-delay:1.0s"><span class="tag">&gt;</span><span class="txt">mapping customer journey...</span></div>
-        <div class="line ok" style="animation-delay:1.8s"><span class="tag">✓</span><span class="txt">layout drafted</span></div>
-        <div class="line" style="animation-delay:2.6s"><span class="tag">&gt;</span><span class="txt">writing components...</span></div>
-        <div class="line ok" style="animation-delay:3.4s"><span class="tag">✓</span><span class="txt">responsive across devices</span></div>
-        <div class="line" style="animation-delay:4.2s"><span class="tag">&gt;</span><span class="txt">connecting WhatsApp automation...</span></div>
-        <div class="line ok" style="animation-delay:5.0s"><span class="tag">✓</span><span class="txt">auto-replies live</span></div>
-        <div class="line ok" style="animation-delay:5.8s"><span class="tag">✓</span><span class="txt">site deployed <span class="caret"></span></span></div>
-      </div>
-    </div>
-  </section>
+<section id="benefits"><div class="container benefits">
+<div class="benefit-copy reveal"><div class="eyebrow">02 — Benefits</div><h2 class="title">Why businesses<br>choose AIThinkar.</h2><p>We don't just make things look good. Every design and technology decision has a business reason behind it.</p><div class="checklist"><div class="check"><b>✓</b>Custom design</div><div class="check"><b>✓</b>Mobile-first</div><div class="check"><b>✓</b>Fast performance</div><div class="check"><b>✓</b>SEO ready</div><div class="check"><b>✓</b>Easy to manage</div><div class="check"><b>✓</b>Scalable solutions</div></div></div>
+<div class="benefit-cards">
+<div class="benefit reveal"><div class="benefit-icon">⚡</div><h3>Launch faster</h3><p>A focused process means less waiting and more time getting your business in front of customers.</p></div>
+<div class="benefit reveal"><div class="benefit-icon">◈</div><h3>Look credible</h3><p>Your digital presence becomes a strong first impression instead of an afterthought.</p></div>
+<div class="benefit reveal"><div class="benefit-icon">◎</div><h3>Work smarter</h3><p>Automation removes repetitive tasks and gives your team more time for meaningful work.</p></div>
+<div class="benefit reveal"><div class="benefit-icon">↗</div><h3>Grow with confidence</h3><p>Build a digital foundation that can evolve as your business grows.</p></div>
+</div></div></section>
 
-  <section id="services">
-    <div class="section-head reveal">
-      <span class="eyebrow">What we do</span>
-      <h2>Two problems, one team.</h2>
-      <p>A site that looks right and a business that runs right — usually solved separately. We build them together.</p>
-    </div>
-    <div class="services">
-      <div class="service-card reveal">
-        <div class="service-icon">◆</div>
-        <h3>Websites & Digital Experiences</h3>
-        <p>Fast, responsive sites built around how your customers actually browse — not how a template assumes they do.</p>
-        <ul>
-          <li>Custom design, no drag-and-drop look</li>
-          <li>Built for mobile first</li>
-          <li>Optimized load speed & SEO basics</li>
-        </ul>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">◇</div>
-        <h3>AI & WhatsApp Automation</h3>
-        <p>Lead capture, auto-replies, and follow-ups that keep working after you've closed your laptop.</p>
-        <ul>
-          <li>WhatsApp auto-responses</li>
-          <li>Lead capture & routing</li>
-          <li>Simple AI-assisted workflows</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<section class="about"><div class="container about-grid">
+<div class="about-text reveal"><div class="eyebrow">03 — About AIThinkar</div><div class="big">Think smart. Build fast. <span>Grow with technology that actually makes sense.</span></div><p>AIThinkar is a digital solutions studio focused on helping businesses build a stronger online presence through modern websites, branding and automation.</p><a class="btn secondary" href="#contact">Work with us ↗</a></div>
+<div class="numbers reveal"><div class="number"><strong>50+</strong><span>Projects & concepts</span></div><div class="number"><strong>4+</strong><span>Years experience</span></div><div class="number"><strong>100%</strong><span>Responsive experiences</span></div><div class="number"><strong>24/7</strong><span>Digital presence</span></div></div>
+</div></section>
 
-  <section id="process">
-    <div class="section-head reveal">
-      <span class="eyebrow">How it happens</span>
-      <h2>From idea to live, in four steps.</h2>
-    </div>
-    <div class="process reveal">
-      <div class="process-step">
-        <span class="num mono">01</span>
-        <h3>Think</h3>
-        <p>We learn the business, the customer, and the one goal the site has to hit.</p>
-      </div>
-      <div class="process-step">
-        <span class="num mono">02</span>
-        <h3>Design</h3>
-        <p>Layout and content built around that one goal — nothing extra.</p>
-      </div>
-      <div class="process-step">
-        <span class="num mono">03</span>
-        <h3>Build</h3>
-        <p>A fast, responsive site, built and tested across devices.</p>
-      </div>
-      <div class="process-step">
-        <span class="num mono">04</span>
-        <h3>Launch</h3>
-        <p>Go live, connect automations, hand over the keys.</p>
-      </div>
-    </div>
-  </section>
+<section id="work"><div class="container">
+<div class="section-top reveal"><div><div class="eyebrow">04 — Portfolio</div><h2 class="title">Work that makes<br>an impression.</h2></div><p class="desc">A selection of digital experiences created to solve real business problems and create memorable customer journeys.</p></div>
+<div class="portfolio">
+<div class="project main reveal"><div class="project-label">01 / RESTAURANT WEBSITE</div><h3>A website that makes<br>people hungry.</h3><div class="mock"><div class="mock-top"><i></i><i></i><i></i></div><div class="mock-body"><div class="mock-logo"></div><div class="mock-title"></div><div class="mock-lines"></div></div></div></div>
+<div><div class="project small reveal"><div class="project-label">02 / BUSINESS WEBSITE</div><h3>Clean. Modern.<br>Trustworthy.</h3><div class="mock"><div class="mock-top"><i></i><i></i><i></i></div><div class="mock-body"><div class="mock-logo"></div><div class="mock-title"></div></div></div></div>
+<div class="project small reveal"><div class="project-label">03 / WHATSAPP AUTOMATION</div><h3>Turn conversations<br>into workflows.</h3></div></div>
+</div></div></section>
 
-  <section id="work">
-    <div class="section-head reveal">
-      <span class="eyebrow">Sample concepts</span>
-      <h2>What "built fast" looks like.</h2>
-      <p>Concept builds showing the range — from clean business sites to automation-first landing pages.</p>
-    </div>
-    <div class="work-grid">
-      <div class="work-card reveal">
-        <div class="work-preview wp1">
-          <div class="browser-dot"><span></span><span></span><span></span></div>
-          <div class="mock-block"></div>
-          <div class="mock-block"></div>
-          <div class="mock-block"></div>
-        </div>
-        <div class="work-info">
-          <span class="tag mono">Concept 01</span>
-          <h3>Local Service Business</h3>
-          <p>Booking-first layout with a clear call-to-action above the fold.</p>
-        </div>
-      </div>
-      <div class="work-card reveal">
-        <div class="work-preview wp2">
-          <div class="browser-dot"><span></span><span></span><span></span></div>
-          <div class="mock-block"></div>
-          <div class="mock-block"></div>
-          <div class="mock-block"></div>
-        </div>
-        <div class="work-info">
-          <span class="tag mono">Concept 02</span>
-          <h3>Product Landing Page</h3>
-          <p>Single-goal page built to convert, with WhatsApp lead capture baked in.</p>
-        </div>
-      </div>
-      <div class="work-card reveal">
-        <div class="work-preview wp3">
-          <div class="browser-dot"><span></span><span></span><span></span></div>
-          <div class="mock-block"></div>
-          <div class="mock-block"></div>
-        </div>
-        <div class="work-info">
-          <span class="tag mono">Concept 03</span>
-          <h3>Portfolio / Personal Brand</h3>
-          <p>Minimal, content-forward layout for individuals building their name.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="process"><div class="container">
+<div class="section-top reveal"><div><div class="eyebrow">05 — Process</div><h2 class="title">From idea to<br>something real.</h2></div><p class="desc">A simple, transparent process that keeps the project moving without unnecessary complexity.</p></div>
+<div class="process">
+<div class="step reveal"><div class="step-no">01</div><h3>Discover</h3><p>We understand your business, audience, goals and challenges.</p></div>
+<div class="step reveal"><div class="step-no">02</div><h3>Design</h3><p>We create the visual direction and customer experience.</p></div>
+<div class="step reveal"><div class="step-no">03</div><h3>Build</h3><p>We develop a fast, responsive and reliable solution.</p></div>
+<div class="step reveal"><div class="step-no">04</div><h3>Launch</h3><p>We launch, measure and help you keep improving.</p></div>
+</div></div></section>
 
-  <section id="contact">
-    <div class="contact-box reveal">
-      <h2>Let's build something better.</h2>
-      <p>Tell us what you're working on — we'll reply within a day, usually faster.</p>
-      <div class="contact-ctas">
-        <!-- replace 91XXXXXXXXXX with your WhatsApp number, country code first, no + or spaces -->
-        <a class="btn btn-primary" href="https://wa.me/91XXXXXXXXXX?text=Hi%20AIThinkar%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Message on WhatsApp</a>
-        <a class="btn btn-ghost" href="mailto:hello@aithinkar.com">Email us</a>
-      </div>
-    </div>
-  </section>
+<section><div class="container">
+<div class="section-top reveal"><div><div class="eyebrow">06 — Client love</div><h2 class="title">Good work<br>speaks loudly.</h2></div></div>
+<div class="testimonials">
+<div class="testimonial reveal"><div class="stars">★★★★★</div><blockquote>“The new website completely changed how professional our business looks online.”</blockquote><div class="client"><strong>Business Owner</strong>Website project</div></div>
+<div class="testimonial reveal"><div class="stars">★★★★★</div><blockquote>“Clean design, fast delivery and exactly the kind of modern experience we wanted.”</blockquote><div class="client"><strong>Founder</strong>Digital presence</div></div>
+<div class="testimonial reveal"><div class="stars">★★★★★</div><blockquote>“The automation saves our team hours every week. It has become part of our daily workflow.”</blockquote><div class="client"><strong>Business Team</strong>Automation project</div></div>
+</div></div></section>
 
-</main>
+<section id="faq"><div class="container faq">
+<div class="reveal"><div class="eyebrow">07 — FAQ</div><h2 class="title">Questions?<br>We've got answers.</h2><p class="desc" style="margin-top:20px">Everything you need to know before starting a project with AIThinkar.</p></div>
+<div class="faq-list reveal">
+<details><summary>What kind of websites do you build?</summary><p>Business websites, restaurant websites, landing pages, portfolio sites and custom digital experiences.</p></details>
+<details><summary>Can you automate my business?</summary><p>Yes. We can identify repetitive workflows and build practical AI, WhatsApp and notification automations around them.</p></details>
+<details><summary>Will my website work on mobile?</summary><p>Yes. Our websites are designed responsively for phones, tablets and desktops.</p></details>
+<details><summary>How do we start?</summary><p>Send us your idea, business details or existing website. We'll discuss the goals and recommend the right solution.</p></details>
+</div></div></section>
 
-<footer>
-  <div class="wrap footer-inner">
-    <span>© 2026 AIThinkar. All rights reserved.</span>
-    <span class="mono">Built by AIThinkar</span>
-  </div>
-</footer>
+<section id="contact"><div class="container">
+<div class="cta reveal"><div class="eyebrow">08 — Start a project</div><h2 class="title">Your next big idea<br><span class="gradient">starts here.</span></h2><p>Have a website, automation or brand idea? Let's turn it into something your customers will remember.</p><a class="btn primary" href="mailto:hello@aithinkar.com">Let's build together ↗</a><div class="contact-info"><span>Web Development</span><span>AI Automation</span><span>WhatsApp Solutions</span></div></div>
+<footer><span>© 2026 AIThinkar</span><span>Think Smart. Build Fast.</span></footer>
+</div></section>
 
 <script>
-  // scroll reveal
-  const items = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold:0.15 });
-  items.forEach(i=>io.observe(i));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.1});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 </script>
-
 </body>
 </html>
