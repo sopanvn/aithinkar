@@ -297,21 +297,40 @@ details{border-color:rgba(16,18,26,.10)}
   *,*:before,*:after{animation:none!important;transition:none!important}
 }
 
-.logo img{
-    width:45px;
-    height:45px;
-    object-fit:contain;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font:700 21px "Space Grotesk";
+    letter-spacing:-1px;
+    line-height:1;
 }
-.logo
-{
-  display:flex !important;
-  gap:0px !important;
+
+.logo img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    display:block;
+}
+
+.logo > span{
+    color:#10121a;
+}
+
+.logo .thinkar{
+    background:linear-gradient(90deg,#7c3aed,#0891b2);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
 }
 </style>
 </head>
 <body>
 <nav>
-<a class="logo" href="#"><img src="./aithinkar.png" style="width:70px;"> AI<span>Thinkar</span></a>
+<a class="logo" href="#">
+    <img src="./aithinkar.png" alt="AIThinkar">
+    <span>AI<span class="thinkar">Thinkar</span></span>
+</a>
 <div class="navlinks"><a href="#services">Services</a><a href="#benefits">Benefits</a><a href="#work">Work</a><a href="#process">Process</a><a href="#faq">FAQ</a></div>
 <a class="nav-btn" href="#contact">Let's talk ↗</a>
 </nav>
