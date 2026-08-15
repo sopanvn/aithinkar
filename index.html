@@ -420,6 +420,66 @@ nav{height:60px;top:10px;padding:0 10px 0 14px;border-radius:15px}
   #visual-work:before{content:"";position:absolute}
   .visual-work{position:relative;z-index:1}
 }
+
+/* V3 — richer editorial color system */
+:root{
+ --purple:#6d28d9;--violet:#8b5cf6;--cyan:#0891b2;--blue:#2563eb;
+ --pink:#db2777;--orange:#ea580c;--amber:#d97706;--green:#059669;
+ --red:#e11d48;--ink:#111827;
+}
+.colorful-section{
+ position:relative;overflow:hidden;
+}
+.colorful-section:before,.colorful-section:after{
+ content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(3px);
+}
+.colorful-section:before{width:360px;height:360px;left:-180px;top:60px;background:radial-gradient(circle,rgba(236,72,153,.12),transparent 68%)}
+.colorful-section:after{width:320px;height:320px;right:-150px;bottom:40px;background:radial-gradient(circle,rgba(8,145,178,.13),transparent 68%)}
+.service:nth-child(1){background:linear-gradient(145deg,#fff,#f4efff)}
+.service:nth-child(2){background:linear-gradient(145deg,#fff,#eefcff)}
+.service:nth-child(3){background:linear-gradient(145deg,#fff,#fff1f8)}
+.service:nth-child(4){background:linear-gradient(145deg,#fff,#fff6ed)}
+.service:nth-child(1) .service-icon{color:#6d28d9;background:#efe7ff}
+.service:nth-child(2) .service-icon{color:#087f98;background:#e0f8fd}
+.service:nth-child(3) .service-icon{color:#be185d;background:#ffe6f1}
+.service:nth-child(4) .service-icon{color:#c2410c;background:#ffeddc}
+.benefit:nth-child(1){background:linear-gradient(145deg,#fff,#f2edff)}
+.benefit:nth-child(2){background:linear-gradient(145deg,#fff,#eafaff)}
+.benefit:nth-child(3){background:linear-gradient(145deg,#fff,#fff0f7)}
+.benefit:nth-child(4){background:linear-gradient(145deg,#fff,#fff6e9)}
+.benefit:nth-child(1) .benefit-icon{color:#7c3aed}.benefit:nth-child(2) .benefit-icon{color:#0891b2}
+.benefit:nth-child(3) .benefit-icon{color:#db2777}.benefit:nth-child(4) .benefit-icon{color:#ea580c}
+.section-color-pills{display:flex;gap:8px;margin-top:25px;flex-wrap:wrap}
+.section-color-pills span{padding:7px 11px;border-radius:50px;font-size:10px;font-weight:700;border:1px solid rgba(16,18,26,.07)}
+.section-color-pills span:nth-child(1){background:#efe7ff;color:#6d28d9}
+.section-color-pills span:nth-child(2){background:#e0f8fd;color:#087f98}
+.section-color-pills span:nth-child(3){background:#ffe6f1;color:#be185d}
+.section-color-pills span:nth-child(4){background:#ffeddc;color:#c2410c}
+.section-color-pills span:nth-child(5){background:#e8f8ee;color:#047857}
+.visual-card:nth-child(1){box-shadow:0 20px 70px rgba(234,88,12,.10)}
+.visual-card:nth-child(2){box-shadow:0 20px 70px rgba(124,58,237,.10)}
+.visual-card:nth-child(3){box-shadow:0 20px 70px rgba(8,145,178,.10)}
+.visual-overlay span{color:#6d28d9}
+.about .number:nth-child(1) strong{color:#7c3aed}
+.about .number:nth-child(2) strong{color:#0891b2}
+.about .number:nth-child(3) strong{color:#db2777}
+.about .number:nth-child(4) strong{color:#ea580c}
+@keyframes colorShift{
+ 0%,100%{filter:hue-rotate(0deg)}
+ 50%{filter:hue-rotate(18deg)}
+}
+.hero:after{animation:heroGlow 9s ease-in-out infinite,colorShift 12s ease-in-out infinite}
+
+@media(max-width:850px){
+ .services[style]{grid-template-columns:1fr 1fr!important}
+ .colorful-section:before{width:260px;height:260px}
+ .colorful-section:after{width:220px;height:220px}
+}
+@media(max-width:520px){
+ .services[style]{grid-template-columns:1fr!important}
+ .section-color-pills{gap:6px}
+ .section-color-pills span{padding:6px 9px}
+}
 </style>
 </head>
 <body>
@@ -444,7 +504,7 @@ nav{height:60px;top:10px;padding:0 10px 0 14px;border-radius:15px}
 <div class="trust"><div class="container trust-row"><span>BUILT FOR <b>STARTUPS</b></span><span><b>LOCAL BUSINESS</b></span><span><b>RESTAURANTS</b></span><span><b>EDUCATION</b></span><span><b>PROFESSIONAL SERVICES</b></span></div></div>
 
 <section id="services"><div class="container">
-<div class="section-top reveal"><div><div class="eyebrow">01 — Services</div><h2 class="title">Everything you need<br>to grow online.</h2></div><p class="desc">From your first website to automated customer journeys, we bring design, technology and strategy together.</p></div>
+<div class="section-top reveal"><div><div class="eyebrow">01 — Services</div><h2 class="title">Everything you need<br>to grow online.</h2></div><p class="desc">From your first website to automated customer journeys, we bring design, technology and strategy together.</p><div class="section-color-pills"><span>Web</span><span>AI</span><span>WhatsApp</span><span>Branding</span><span>SEO</span></div></div>
 <div class="services">
 <div class="service reveal"><div class="service-top"><div class="service-icon">⌁</div><span class="service-num">01</span></div><h3>Website Development</h3><p>Modern, fast and responsive websites designed around your business and customers.</p><a class="service-link" href="#contact">Build your website →</a></div>
 <div class="service reveal"><div class="service-top"><div class="service-icon">✦</div><span class="service-num">02</span></div><h3>AI Automation</h3><p>Automate repetitive work and create intelligent workflows that save time every day.</p><a class="service-link" href="#contact">Automate your business →</a></div>
@@ -468,6 +528,21 @@ nav{height:60px;top:10px;padding:0 10px 0 14px;border-radius:15px}
 </div></section>
 
 
+
+<section class="colorful-section" style="padding-top:35px;padding-bottom:70px;background:#fff">
+<div class="container">
+<div class="section-top reveal">
+<div><div class="eyebrow">Visual language</div><h2 class="title" style="font-size:34px">Different businesses.<br>Different personalities.</h2></div>
+<p class="desc">We don't force every brand into the same purple template. Color, imagery and layout change with the business.</p>
+</div>
+<div class="services" style="grid-template-columns:repeat(4,1fr)">
+<div class="service reveal" style="min-height:190px;background:linear-gradient(145deg,#fff4e8,#fff)"><div class="service-icon">🍕</div><h3 style="margin-top:28px;font-size:20px">Restaurants</h3><p>Warm, appetite-led visuals.</p></div>
+<div class="service reveal" style="min-height:190px;background:linear-gradient(145deg,#eafcff,#fff)"><div class="service-icon">✦</div><h3 style="margin-top:28px;font-size:20px">Technology</h3><p>Clean, energetic interfaces.</p></div>
+<div class="service reveal" style="min-height:190px;background:linear-gradient(145deg,#fff0f7,#fff)"><div class="service-icon">◇</div><h3 style="margin-top:28px;font-size:20px">Fashion</h3><p>Bold editorial experiences.</p></div>
+<div class="service reveal" style="min-height:190px;background:linear-gradient(145deg,#edf9f1,#fff)"><div class="service-icon">↗</div><h3 style="margin-top:28px;font-size:20px">Services</h3><p>Trust-first business design.</p></div>
+</div>
+</div>
+</section>
 <section id="visual-work">
 <div class="container">
   <div class="section-top reveal">
