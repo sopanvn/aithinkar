@@ -297,41 +297,49 @@ details{border-color:rgba(16,18,26,.10)}
   *,*:before,*:after{animation:none!important;transition:none!important}
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font:700 21px "Space Grotesk";
-    letter-spacing:-1px;
-    line-height:1;
+/* MOBILE VISUAL HIERARCHY */
+@media(max-width:850px){
+body{background:#f4f6fb}
+.hero{background:radial-gradient(circle at 80% 18%,rgba(124,58,237,.16),transparent 30%),radial-gradient(circle at 10% 55%,rgba(8,145,178,.10),transparent 28%),#fff;border-bottom:1px solid rgba(16,18,26,.07)}
+.trust{background:linear-gradient(90deg,#f7f2ff,#eefaff);padding:18px 0}
+.trust-row{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;font-size:9px;text-align:center}
+#services{background:linear-gradient(180deg,#f4f0ff,#fafbff);position:relative;overflow:hidden}
+#services:before{content:"";position:absolute;width:220px;height:220px;right:-100px;top:80px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.14),transparent 70%)}
+#benefits{background:#fff;position:relative}
+#benefits:after{content:"";position:absolute;left:-120px;bottom:40px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(8,145,178,.09),transparent 68%)}
+.about{background:linear-gradient(180deg,#eef9ff,#f7f2ff);border-block:1px solid rgba(16,18,26,.06)}
+#work{background:#fff;position:relative}
+#work:before{content:"";position:absolute;width:240px;height:240px;left:-130px;top:170px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.10),transparent 70%)}
+#process{background:linear-gradient(180deg,#f5f7fc,#edf5ff)}
+#process .step{background:rgba(255,255,255,.78);border:1px solid rgba(16,18,26,.07);border-radius:16px;margin-bottom:10px;padding:20px!important;min-height:145px;box-shadow:0 8px 25px rgba(31,41,55,.045)}
+#process .step:last-child{margin-bottom:0}
+#process .step h3{margin-top:35px}
+#process .process{border-top:0;display:grid;gap:0}
+section:has(.testimonials){background:linear-gradient(180deg,#fff,#faf6ff)}
+.testimonial{background:rgba(255,255,255,.9);box-shadow:0 12px 35px rgba(31,41,55,.06)}
+#faq{background:#f3f7ff;position:relative}
+#faq .faq-list{background:#fff;border:1px solid rgba(16,18,26,.08);border-radius:18px;padding:0 18px;box-shadow:0 12px 35px rgba(31,41,55,.05)}
+#contact{background:linear-gradient(180deg,#eef0ff,#f7f8fc);padding-top:70px}
+.cta{box-shadow:0 20px 60px rgba(79,70,229,.10)}
+.service{background:rgba(255,255,255,.92);box-shadow:0 12px 35px rgba(31,41,55,.055)}
 }
-
-.logo img{
-    width:60px;
-    height:60px;
-    object-fit:contain;
-    display:block;
-}
-
-.logo > span{
-    color:#10121a;
-    margin-top:5px;
-}
-
-.logo .thinkar{
-    background:linear-gradient(90deg,#7c3aed,#0891b2);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
+@media(max-width:520px){
+section{padding:72px 0}.hero{padding-bottom:80px}
+.trust-row span{padding:10px 7px;border:1px solid rgba(16,18,26,.06);border-radius:10px;background:rgba(255,255,255,.65)}
+.services,.benefit-cards,.testimonials{gap:12px}
+.service,.benefit,.testimonial,.project{border-radius:20px}
+.numbers{border-radius:18px}.number{padding:24px}
+.project.small+.project.small{margin-top:12px}
+.cta{border-radius:24px;padding:75px 20px}
+nav{height:60px;top:10px;padding:0 10px 0 14px;border-radius:15px}
+.logo{gap:6px;font-size:18px}.logo img{width:45px!important;height:45px!important}
+.nav-btn{padding:9px 12px;font-size:11px}
 }
 </style>
 </head>
 <body>
 <nav>
-<a class="logo" href="#">
-    <img src="./aithinkar.png" alt="AIThinkar">
-    <span>AI<span class="thinkar">Thinkar</span></span>
-</a>
+<a class="logo" href="#">AI<span>Thinkar</span></a>
 <div class="navlinks"><a href="#services">Services</a><a href="#benefits">Benefits</a><a href="#work">Work</a><a href="#process">Process</a><a href="#faq">FAQ</a></div>
 <a class="nav-btn" href="#contact">Let's talk ↗</a>
 </nav>
