@@ -2246,3 +2246,666 @@
     justify-content: center;
   }
 }
+
+
+/* =========================================================
+   MOBILE RESPONSIVE FIXES
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.home-page {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.page-container,
+.container {
+  width: min(1180px, calc(100% - 40px));
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .page-container,
+  .container {
+    width: min(100% - 32px, 760px);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 45px !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(42px, 7vw, 60px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -2px !important;
+  }
+
+  .hero-content p {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-preview {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-content {
+    text-align: center;
+  }
+
+  .featured-points {
+    justify-content: center;
+  }
+
+  .featured-visual {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .demo-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-content {
+    text-align: center;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trust-box {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .home-page {
+    overflow-x: hidden !important;
+  }
+
+  .page-container,
+  .container {
+    width: calc(100% - 28px) !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+
+  /* ================= HERO ================= */
+
+  .hero {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 35px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .hero-badge {
+    max-width: 100%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    font-size: 38px !important;
+    line-height: 1.04 !important;
+    letter-spacing: -1.8px !important;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .hero-content h1 span {
+    display: inline !important;
+  }
+
+  .hero-content p {
+    width: 100% !important;
+    max-width: 330px !important;
+    margin: 20px auto 0 !important;
+
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+  }
+
+  .hero-actions {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    margin-top: 25px !important;
+  }
+
+  .hero-actions a,
+  .hero-actions button {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .hero-points {
+    width: 100% !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px 16px !important;
+  }
+
+
+  /* ================= HERO PREVIEW ================= */
+
+  .hero-preview {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    overflow: hidden !important;
+  }
+
+  .hero-preview > * {
+    max-width: 100% !important;
+  }
+
+  .hero-browser {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .hero-browser-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+
+  /* ================= STATS ================= */
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .stat-card {
+    min-width: 0 !important;
+    padding: 18px 10px !important;
+    text-align: center;
+  }
+
+  .stat-card strong {
+    font-size: 27px !important;
+  }
+
+  .stat-card span {
+    font-size: 11px !important;
+  }
+
+  .stat-icon {
+    margin: 0 auto 8px;
+  }
+
+
+  /* ================= SECTION HEADINGS ================= */
+
+  .section-heading-center {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-heading-center h2,
+  .section-heading-row h2 {
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+    letter-spacing: -1.5px !important;
+  }
+
+  .section-heading-center p,
+  .section-heading-row p {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+  }
+
+  .section-label {
+    font-size: 10px !important;
+  }
+
+
+  /* ================= SERVICES ================= */
+
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .service-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .service-card h3 {
+    font-size: 20px !important;
+  }
+
+  .service-card p {
+    font-size: 13px !important;
+  }
+
+
+  /* ================= FEATURE ================= */
+
+  .featured-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 35px !important;
+  }
+
+  .featured-content {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .featured-content h2 {
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+  }
+
+  .featured-content p {
+    font-size: 14px !important;
+  }
+
+  .featured-points {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    width: fit-content;
+    max-width: 100%;
+    margin: 20px auto !important;
+  }
+
+  .featured-visual {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .featured-browser {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .featured-floating-one {
+    right: 0 !important;
+  }
+
+  .featured-floating-two {
+    left: 0 !important;
+  }
+
+
+  /* ================= DEMOS ================= */
+
+  .section-heading-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+  }
+
+  .section-heading-row > div {
+    width: 100%;
+  }
+
+  .demo-showcase-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .demo-showcase-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .demo-browser {
+    width: 100% !important;
+  }
+
+  .demo-browser-content {
+    min-height: 230px;
+  }
+
+
+  /* ================= WHY ================= */
+
+  .why-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .why-content {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .why-content h2 {
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+  }
+
+  .why-content p {
+    font-size: 14px !important;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .benefit-card {
+    min-width: 0 !important;
+    padding: 18px 12px !important;
+  }
+
+  .benefit-card h3 {
+    font-size: 16px !important;
+  }
+
+  .benefit-card p {
+    font-size: 11px !important;
+  }
+
+
+  /* ================= CAPABILITIES ================= */
+
+  .capabilities-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .capability-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+
+  /* ================= INDUSTRIES ================= */
+
+  .industries-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .industry-card {
+    min-width: 0 !important;
+    padding: 18px 12px !important;
+  }
+
+  .industry-card h3 {
+    font-size: 16px !important;
+  }
+
+  .industry-card p {
+    font-size: 11px !important;
+  }
+
+
+  /* ================= PROCESS ================= */
+
+  .process-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .process-card {
+    width: 100% !important;
+  }
+
+  .process-arrow {
+    display: none !important;
+  }
+
+
+  /* ================= TRUST ================= */
+
+  .trust-box {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 28px 20px !important;
+  }
+
+  .trust-box h2 {
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+  }
+
+  .trust-box p {
+    font-size: 14px !important;
+  }
+
+  .trust-list {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+
+  /* ================= TESTIMONIAL ================= */
+
+  .testimonial-card {
+    width: 100% !important;
+    padding: 28px 20px !important;
+  }
+
+  .testimonial-card blockquote {
+    font-size: 21px !important;
+    line-height: 1.4 !important;
+  }
+
+
+  /* ================= FAQ ================= */
+
+  .faq-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .faq-grid h2 {
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+  }
+
+  .faq-item summary {
+    font-size: 14px !important;
+    gap: 10px;
+  }
+
+  .faq-item p {
+    font-size: 13px !important;
+  }
+
+
+  /* ================= CTA ================= */
+
+  .home-final-cta {
+    overflow: hidden !important;
+  }
+
+  .home-final-cta .page-container {
+    text-align: center !important;
+  }
+
+  .home-final-cta h2 {
+    font-size: 36px !important;
+    line-height: 1.08 !important;
+    letter-spacing: -1.5px !important;
+  }
+
+  .home-final-cta p {
+    font-size: 14px !important;
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-button {
+    width: 100% !important;
+    max-width: 330px !important;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center !important;
+  }
+
+  .cta-floating-icon {
+    transform: scale(.7);
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .page-container,
+  .container {
+    width: calc(100% - 22px) !important;
+  }
+
+  .hero-content h1 {
+    font-size: 34px !important;
+  }
+
+  .section-heading-center h2,
+  .section-heading-row h2,
+  .featured-content h2,
+  .why-content h2,
+  .trust-box h2,
+  .faq-grid h2 {
+    font-size: 30px !important;
+  }
+
+  .home-final-cta h2 {
+    font-size: 32px !important;
+  }
+
+  .benefits-grid,
+  .industries-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
