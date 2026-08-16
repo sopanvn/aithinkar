@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, ArrowUp } from "lucide-react";
+import { ArrowUpRight, Instagram } from "lucide-react";
 
 function Footer() {
 
@@ -27,11 +28,19 @@ function Footer() {
               automation for businesses ready to grow.
             </p>
 
-            <div className="footer-socials">
-              <a href="#" aria-label="Instagram">IG</a>
-              <a href="#" aria-label="LinkedIn">IN</a>
-              <a href="#" aria-label="Facebook">FB</a>
-            </div>
+              <div className="footer-socials">
+                <a href="https://www.instagram.com/aithinkar" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <Instagram size={18} />
+                </a>
+
+                {/* <a href="#" aria-label="LinkedIn">
+                  IN
+                </a> */}
+
+                {/* <a href="#" aria-label="Facebook">
+                  FB
+                </a> */}
+              </div>
           </div>
 
           <div className="footer-column">
