@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  ArrowUpRight,
-  Instagram,
-  Facebook,
-  Linkedin,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 function Footer() {
   return (
@@ -12,6 +7,7 @@ function Footer() {
       <div className="page-container">
 
         <div className="footer-top">
+
           <div className="footer-brand">
             <Link to="/" className="logo">
               <img src="/aithinkar.png" alt="AIThinkar" />
@@ -24,9 +20,9 @@ function Footer() {
             </p>
 
             <div className="footer-socials">
-              <a href="#" aria-label="Instagram"><Instagram size={17} /></a>
-              <a href="#" aria-label="Facebook"><Facebook size={17} /></a>
-              <a href="#" aria-label="LinkedIn"><Linkedin size={17} /></a>
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="LinkedIn">IN</a>
+              <a href="#" aria-label="Facebook">FB</a>
             </div>
           </div>
 
@@ -60,11 +56,17 @@ function Footer() {
               <ArrowUpRight size={17} />
             </Link>
           </div>
+
         </div>
 
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} AIThinkar. All rights reserved.</span>
-          <span>Designed & built by AIThinkar</span>
+          <span>
+            © {new Date().getFullYear()} AIThinkar. All rights reserved.
+          </span>
+
+          <span>
+            Designed & built by AIThinkar
+          </span>
         </div>
 
       </div>
