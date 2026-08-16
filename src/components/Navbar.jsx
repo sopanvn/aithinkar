@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import '../styles/navbar.css';
+import '../navbar.css';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
