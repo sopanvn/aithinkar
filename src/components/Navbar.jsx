@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { NavLink, Link } from "react-router-dom";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,72 +9,74 @@ function Navbar() {
 
   return (
     <header className="navbar">
-      <div className="navbar-container">
+      <div className="nav-container">
 
-        {/* LOGO */}
-        <Link to="/" className="navbar-logo" onClick={closeMenu}>
-          <span className="logo-icon">◈</span>
-          <span>AIThinkar</span>
+        <Link to="/" className="logo" onClick={closeMenu}>
+          <img src="/aithinkar.png" alt="AIThinkar" />
+          <span>AI<span>Thinkar</span></span>
         </Link>
 
         {/* DESKTOP NAV */}
-        <nav className="navbar-links">
-          <Link to="/" className="active">Home</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/demos">Demos</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+        <nav className="nav-links">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/services">Services</NavLink>
+          <NavLink to="/demos">Demo Sites</NavLink>
+          <NavLink to="/portfolio">Portfolio</NavLink>
         </nav>
 
-        {/* DESKTOP CTA */}
-        <Link to="/contact" className="navbar-cta">
-          Start a Project
-          <ArrowRight size={15} />
-        </Link>
+        <div className="nav-actions">
 
-        {/* MOBILE TOGGLE */}
-        <button
-          type="button"
-          className="mobile-menu-button"
-          onClick={() => setMenuOpen(prev => !prev)}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-        >
-          {menuOpen ? <X size={21} /> : <Menu size={21} />}
-        </button>
+          {/* DESKTOP CTA */}
+          <Link to="/contact" className="nav-cta">
+            Let's Talk
+            <ArrowUpRight size={16} />
+          </Link>
 
+          {/* MOBILE MENU BUTTON */}
+          <button
+            type="button"
+            className="mobile-menu-btn"
+            onClick={() => setMenuOpen(prev => !prev)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+
+        </div>
       </div>
 
       {/* MOBILE MENU */}
-      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+      <div className={`mobile-nav ${menuOpen ? "mobile-nav-open" : ""}`}>
 
-        <Link to="/" onClick={closeMenu}>
+        <NavLink to="/" onClick={closeMenu}>
           Home
-        </Link>
+        </NavLink>
 
-        <Link to="/services" onClick={closeMenu}>
-          Services
-        </Link>
-
-        <Link to="/demos" onClick={closeMenu}>
-          Demos
-        </Link>
-
-        <Link to="/about" onClick={closeMenu}>
+        <NavLink to="/about" onClick={closeMenu}>
           About
-        </Link>
+        </NavLink>
 
-        <Link to="/contact" onClick={closeMenu}>
-          Contact
-        </Link>
+        <NavLink to="/services" onClick={closeMenu}>
+          Services
+        </NavLink>
+
+        <NavLink to="/demos" onClick={closeMenu}>
+          Demo Sites
+        </NavLink>
+
+        <NavLink to="/portfolio" onClick={closeMenu}>
+          Portfolio
+        </NavLink>
 
         <Link
           to="/contact"
-          className="mobile-menu-cta"
+          className="mobile-nav-cta"
           onClick={closeMenu}
         >
-          Start a Project
-          <ArrowRight size={16} />
+          Let's Talk
+          <ArrowUpRight size={17} />
         </Link>
 
       </div>
