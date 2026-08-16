@@ -6687,3 +6687,49 @@ section {
     height: 18px;
   }
 }
+
+
+.instagram-icon {
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+
+  border: 2px solid currentColor;
+  border-radius: 5px;
+
+  position: relative;
+}
+
+.instagram-icon::before {
+  content: "";
+
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+}
+
+.instagram-icon::after {
+  content: "";
+
+  position: absolute;
+
+  width: 2.5px;
+  height: 2.5px;
+
+  background: currentColor;
+  border-radius: 50%;
+
+  top: 2px;
+  right: 2px;
+}
