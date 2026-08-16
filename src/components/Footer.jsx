@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowUp } from "lucide-react";
 
 function Footer() {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer className="footer">
       <div className="page-container">
@@ -70,6 +78,17 @@ function Footer() {
         </div>
 
       </div>
+
+      {/* BACK TO TOP */}
+      <button
+        className="back-to-top"
+        onClick={scrollToTop}
+        aria-label="Back to top"
+        title="Back to top"
+      >
+        <ArrowUp size={19} />
+      </button>
+
     </footer>
   );
 }
