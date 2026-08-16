@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight, ArrowUp, Instagram } from "lucide-react";
+import { ArrowUp, Instagram } from "lucide-react";
 
 function Footer() {
 
