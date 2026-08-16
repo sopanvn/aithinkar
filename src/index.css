@@ -6559,3 +6559,131 @@ section {
   }
 
 }
+
+
+
+
+/* =================================
+   FLOATING BACK TO TOP BUTTON
+================================= */
+
+.back-to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+
+  width: 52px;
+  height: 52px;
+
+  border: 1px solid rgba(124, 58, 237, 0.45);
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #6366f1
+  );
+
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 9999;
+
+  box-shadow:
+    0 0 0 1px rgba(124, 58, 237, 0.15),
+    0 0 15px rgba(124, 58, 237, 0.45),
+    0 0 35px rgba(124, 58, 237, 0.25),
+    0 12px 30px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+
+  animation: backToTopGlow 2.5s ease-in-out infinite;
+}
+
+
+/* GLOW PULSE */
+
+@keyframes backToTopGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px rgba(124, 58, 237, 0.15),
+      0 0 15px rgba(124, 58, 237, 0.45),
+      0 0 35px rgba(124, 58, 237, 0.25),
+      0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(124, 58, 237, 0.25),
+      0 0 22px rgba(124, 58, 237, 0.7),
+      0 0 50px rgba(124, 58, 237, 0.4),
+      0 14px 35px rgba(0, 0, 0, 0.18);
+  }
+}
+
+
+/* HOVER */
+
+.back-to-top:hover {
+  transform: translateY(-6px) scale(1.08);
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6366f1
+  );
+
+  box-shadow:
+    0 0 20px rgba(124, 58, 237, 0.8),
+    0 0 45px rgba(124, 58, 237, 0.55),
+    0 15px 40px rgba(0, 0, 0, 0.2);
+
+  animation: none;
+}
+
+
+/* ICON */
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.back-to-top:hover svg {
+  transform: translateY(-3px);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+  .back-to-top {
+    right: 20px;
+    bottom: 20px;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+  }
+
+  .back-to-top svg {
+    width: 18px;
+    height: 18px;
+  }
+}
