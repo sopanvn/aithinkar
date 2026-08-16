@@ -17,7 +17,7 @@ function Navbar() {
           <NavLink to="/services">Services</NavLink>
           <NavLink to="/demos">Demo Sites</NavLink>
           <NavLink to="/portfolio">Portfolio</NavLink>
-          <NavLink to="/pricing">Pricing</NavLink>
+          {/* <NavLink to="/pricing">Pricing</NavLink> */}
         </nav>
 
         <div className="nav-actions">
