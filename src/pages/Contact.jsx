@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+ 
 const services = [
   "Website Development",
   "UI / UX Design",
